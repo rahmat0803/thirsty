@@ -1,0 +1,237 @@
+/* Gaya Umum untuk Body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #003055;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tombol Kembali */
+.back-button {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.back-button button {
+    background-color: #705e58;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-button button:hover {
+    background-color: #e1e810;
+    transform: scale(1.1);
+}
+
+.back-button button:focus {
+    outline: none;
+}
+
+/* Section Menu Lengkap */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #e4e3d5;
+    box-sizing: border-box;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Menu List */
+.menu-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Grid responsif */
+    gap: 2rem;
+    margin-top: 20px;
+    padding-bottom: 7%;
+    overflow-x: hidden; /* Menambahkan overflow horizontal */
+    padding: 0 10px; /* Memberikan sedikit ruang ke kiri dan kanan */
+    box-sizing: border-box; /* Pastikan padding tidak merusak layout */
+}
+
+/* Menu Item */
+.menu-item {
+    background-color: #003055;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; /* Pastikan item mengambil lebar penuh */
+    box-sizing: border-box; /* Pastikan padding tidak menyebabkan item melebar */
+}
+
+.menu-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.menu-item h3 {
+    font-size: 1.5rem;
+    color: #e47070;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+}
+
+.menu-item ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.menu-item li {
+    font-size: 1rem;
+    color: #868282;
+    margin: 5px 0;
+}
+
+/* Styling untuk Harga */
+.menu-item .menu-item-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #c1ff07;
+    margin-left: 10px;
+}
+
+
+/* Responsif */
+@media (max-width: 768px) {
+    /* Menu List Responsif pada layar 768px */
+    .menu-list {
+        grid-template-columns: 1fr 1fr; /* Dua kolom pada layar 768px */
+        gap: 1.5rem; /* Menyesuaikan jarak antar item */
+        padding-bottom: 5%;
+    }
+
+    .section-title h2 {
+        font-size: 2rem;
+    }
+
+    .menu-item h3 {
+        font-size: 1.4rem;
+    }
+
+    .menu-item li {
+        font-size: 0.9rem;
+    }
+
+    /* Menu Item */
+    .menu-item {
+        padding: 20px;
+    }
+
+    .back-button button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 560px) {
+    /* Menu List Responsif pada layar 560px */
+    .menu-list {
+        grid-template-columns: 1fr 1fr; /* Dua kolom pada layar 560px */
+        gap: 1rem;
+        padding-bottom: 5%;
+    }
+
+    .section-title h2 {
+        font-size: 1.9rem;
+    }
+
+    .menu-item h3 {
+        font-size: 1.3rem;
+    }
+
+    .menu-item li {
+        font-size: 0.9rem;
+    }
+
+    /* Menu Item */
+    .menu-item {
+        padding: 15px;
+    }
+
+    .back-button button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Section Menu Lengkap */
+    .section {
+        padding: 20px 10px; /* Padding lebih kecil */
+        overflow: hidden;
+    }
+
+    .section-title h2 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+
+    /* Menu List */
+    .menu-list {
+        grid-template-columns: 1fr; /* Hanya satu kolom */
+        gap: 1rem; /* Jarak antar item */
+        margin-top: 0;
+        padding-bottom: 5%;
+        overflow-x: auto; /* Menambahkan scroll horizontal */
+        white-space: nowrap; /* Menjaga item tetap dalam satu baris */
+    }
+
+    /* Menu Item */
+    .menu-item {
+        padding: 15px;
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
+
+    .menu-item h3 {
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .menu-item ul {
+        margin-top: 5px;
+    }
+
+    .menu-item li {
+        font-size: 0.9rem;
+    }
+
+    /* Harga Menu Item */
+    .menu-item .menu-item-price {
+        font-size: 1rem;
+    }
+
+    /* Tombol Kembali */
+    .back-button button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    /* Footer */
+    footer {
+        padding: 0.5rem;
+        font-size: 0.4rem;
+    color: #e4e3d5;
+    text-align: center;
+    }
+}
+
